@@ -4,7 +4,7 @@
   "description": "an example of using generator in js",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
     "start": "node main.js"
   },
   "repository": {
