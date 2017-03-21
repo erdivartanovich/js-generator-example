@@ -1,0 +1,23 @@
+{
+  "name": "generator_example",
+  "version": "1.0.0",
+  "description": "an example of using generator in js",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdivartanovich/js-generator-example.git"
+  },
+  "keywords": [
+    "generator"
+  ],
+  "author": "erdiansyah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erdivartanovich/js-generator-example/issues"
+  },
+  "homepage": "https://github.com/erdivartanovich/js-generator-example#readme"
+}
