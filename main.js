@@ -39,4 +39,3 @@ console.log('hasil generator secara spread: ', values);
 
 
 
-
