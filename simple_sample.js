@@ -1,17 +1,26 @@
+//this example can be found here:
+//https://github.com/erdivartanovich/js-generator-example
+
 console.log("======== simple generator example part 1 ==========");
-function *foo1(x, y) {
+function *prosesBertahap(x, y) {
 	yield x*y;
 	yield x + y;
 	yield (x/y);
 }
-var it = foo1(6,7);
+
+var it = prosesBertahap(6,7);
+
 var res= it.next();
 console.log(res);
+
 var res= it.next();
 console.log(res.value);
+
 var res = it.next();
 console.log(res.value);
-var [...arrvalues] = foo1(2,3);
+
+//bagaimana memperoleh hasil sekaligus?
+var [...arrvalues] = prosesBertahap(2,3);
 console.log('hasil sekaligus: ', arrvalues);
 
 
@@ -35,7 +44,7 @@ console.log('hasil sekaligus: ', arrvalues);
 console.log("======== simple generator example part 2 ==========");
 var x = 1;
 
-function *foo2() {
+function *prosesBertahap2() {
 	++x;
 	yield;
 	console.log("x:", x);
@@ -49,7 +58,7 @@ function bar() {
 	console.log("x by bar:", x);
 }
 
-var it = foo2 ();
+var it = prosesBertahap2 ();
 it.next();
 x;
 bar();
@@ -75,12 +84,12 @@ it.next();
 
 
 console.log("======== simple generator example part 3 ==========");
-function *foo3(x) {
+function *prosesBertahap3(x) {
 	var y = x * (yield "hello");
 	return y;
 } 
 
-var it = foo3(6);
+var it = prosesBertahap3(6);
 var hasil_pertama = it.next(); // y = 6 *
 console.log(hasil_pertama);
 
@@ -115,19 +124,12 @@ function promise() {
 	}
 	)};
 
-function *foo4() {
-	try 
-		{
+function *generator() {
 			var hasilPromise = yield promise();
 			console.log('hasil promise: ', hasilPromise);
-		}
-		catch(error)
-		{
-			console.error('error');
-		}
 }
 
-var it = foo4();
+var it = generator();
 var p = it.next().value;
 
 p.then(
